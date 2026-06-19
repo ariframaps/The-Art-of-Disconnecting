@@ -36,34 +36,34 @@ const BAR_H = 60; // px, total bar column height
 
 export function Slide05Cognitive() {
   return (
-    <div className="relative w-full h-full bg-neutral-950 flex flex-col px-10 md:px-16 py-10 overflow-hidden select-none">
+    <div className="relative w-full h-full bg-neutral-950 flex flex-col px-4 sm:px-6 md:px-10 lg:px-16 py-6 sm:py-8 md:py-10 overflow-hidden select-none gap-6 md:gap-8">
       {/* Violet glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[360px] bg-violet-900/[0.08] rounded-full blur-[120px] pointer-events-none" />
 
       {/* Header */}
       <motion.div
-        className="relative z-10 flex justify-between items-center"
+        className="relative z-10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-4"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: false }}
         transition={{ duration: 0.6, ease: EASE }}
       >
-        <span className="font-mono text-[10px] text-neutral-600 tracking-[0.25em] uppercase">
+        <span className="font-mono text-[8px] sm:text-[9px] md:text-[10px] text-neutral-600 tracking-[0.2em] sm:tracking-[0.25em] uppercase">
           05 / 07 - The Cognitive Toll
         </span>
-        <span className="font-mono text-[10px] text-violet-900/70 tracking-widest uppercase">
+        <span className="font-mono text-[8px] sm:text-[9px] md:text-[10px] text-violet-900/70 tracking-widest uppercase">
           Performance Audit
         </span>
       </motion.div>
 
       {/* Main */}
-      <div className="relative z-10 flex-1 flex items-center gap-14">
+      <div className="relative z-10 flex-1 flex flex-col lg:flex-row items-start lg:items-center gap-6 md:gap-8 lg:gap-14">
         {/* Left anchor */}
-        <div className="w-[38%] shrink-0">
+        <div className="w-full lg:w-1/3 flex flex-col justify-start lg:justify-center">
           <div className="overflow-hidden">
             <motion.div
               className="font-display text-white leading-none tracking-tight"
-              style={{ fontSize: "clamp(3rem, 9.5vw, 11rem)" }}
+              style={{ fontSize: "clamp(2.5rem, 8vw, 11rem)" }}
               initial={{ y: "110%" }}
               whileInView={{ y: "0%" }}
               viewport={{ once: false }}
@@ -75,7 +75,7 @@ export function Slide05Cognitive() {
           <div className="overflow-hidden">
             <motion.div
               className="font-display text-violet-400 leading-none tracking-tight"
-              style={{ fontSize: "clamp(2.5rem, 7.5vw, 9rem)" }}
+              style={{ fontSize: "clamp(2rem, 6vw, 9rem)" }}
               initial={{ y: "110%" }}
               whileInView={{ y: "0%" }}
               viewport={{ once: false }}
@@ -86,7 +86,7 @@ export function Slide05Cognitive() {
           </div>
 
           <motion.p
-            className="mt-6 font-sans text-sm text-neutral-500 max-w-xs leading-relaxed"
+            className="mt-4 sm:mt-6 md:mt-6 font-sans text-xs sm:text-sm text-neutral-500 max-w-xs leading-relaxed"
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
@@ -97,16 +97,16 @@ export function Slide05Cognitive() {
         </div>
 
         {/* Right: Timeline performance */}
-        <div className="flex-1 flex flex-col gap-0">
+        <div className="w-full lg:w-2/3 flex flex-col gap-0">
           {/* Section label */}
           <motion.div
-            className="flex items-center gap-4 mb-5"
+            className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-5"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: false }}
             transition={{ duration: 0.6, delay: 0.28, ease: EASE }}
           >
-            <span className="font-mono text-[9px] text-neutral-600 tracking-widest uppercase whitespace-nowrap">
+            <span className="font-mono text-[7px] sm:text-[8px] md:text-[9px] text-neutral-600 tracking-widest uppercase whitespace-nowrap">
               Cognitive Impact Timeline
             </span>
             <div className="flex-1 h-px bg-neutral-800" />
@@ -115,7 +115,7 @@ export function Slide05Cognitive() {
           {ITEMS.map((item, i) => (
             <motion.div
               key={item.id}
-              className={`flex gap-5 py-5 group ${
+              className={`flex gap-3 sm:gap-4 py-3 sm:py-4 md:py-5 group ${
                 i < ITEMS.length - 1 ? "border-b border-neutral-900" : ""
               }`}
               initial={{ x: 48, opacity: 0 }}
@@ -124,10 +124,10 @@ export function Slide05Cognitive() {
               transition={{ duration: 0.75, delay: 0.32 + i * 0.18, ease: EASE }}
             >
               {/* Bar column */}
-              <div className="flex flex-col items-center gap-2 shrink-0">
+              <div className="flex flex-col items-center gap-1.5 sm:gap-2 shrink-0">
                 <div
-                  className="w-10 bg-neutral-900/80 flex flex-col justify-end overflow-hidden"
-                  style={{ height: BAR_H }}
+                  className="w-7 sm:w-8 md:w-10 bg-neutral-900/80 flex flex-col justify-end overflow-hidden"
+                  style={{ height: 40 }}
                 >
                   <motion.div
                     className={`w-full ${
@@ -137,7 +137,7 @@ export function Slide05Cognitive() {
                     }`}
                     initial={{ height: 0 }}
                     whileInView={{
-                      height: Math.round((item.fillPct / 100) * BAR_H),
+                      height: Math.round((item.fillPct / 100) * 40),
                     }}
                     viewport={{ once: false }}
                     transition={{
@@ -148,7 +148,7 @@ export function Slide05Cognitive() {
                   />
                 </div>
                 <span
-                  className={`font-display text-sm leading-none ${
+                  className={`font-display text-xs sm:text-sm leading-none ${
                     item.color === "violet" ? "text-violet-400" : "text-red-400"
                   }`}
                 >
@@ -157,20 +157,20 @@ export function Slide05Cognitive() {
               </div>
 
               {/* Text */}
-              <div className="pt-1">
-                <div className="flex items-center gap-2 mb-1.5">
-                  <span className="font-mono text-[9px] text-neutral-700">
+              <div className="pt-1 min-w-0">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 mb-1 sm:mb-1.5">
+                  <span className="font-mono text-[8px] sm:text-[9px] text-neutral-700 shrink-0">
                     [{item.id}]
                   </span>
-                  <h3 className="font-display text-lg text-white tracking-wide">
+                  <h3 className="font-display text-base sm:text-lg md:text-lg text-white tracking-wide">
                     {item.title}
                   </h3>
                 </div>
-                <p className="font-sans text-sm text-neutral-400 leading-relaxed">
+                <p className="font-sans text-xs sm:text-sm text-neutral-400 leading-relaxed">
                   {item.desc}
                 </p>
                 {item.source && (
-                  <p className="font-mono text-[9px] text-neutral-700 mt-1.5 tracking-wider">
+                  <p className="font-mono text-[7px] sm:text-[8px] md:text-[9px] text-neutral-700 mt-1 sm:mt-1.5 tracking-wider">
                     {item.source}
                   </p>
                 )}
@@ -192,7 +192,7 @@ export function Slide05Cognitive() {
           href="https://www.interruptions.net/literature/Spira-Basex05.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-mono text-[9px] text-neutral-800 tracking-wider hover:text-neutral-600 transition-colors"
+          className="font-mono text-[8px] sm:text-[9px] text-neutral-800 tracking-wider hover:text-neutral-600 transition-colors"
         >
           ↗ HBR.ORG - THE-COST-OF-NOT-PAYING-ATTENTION
         </a>

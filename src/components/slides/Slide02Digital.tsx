@@ -27,14 +27,14 @@ const METRICS = [
 
 export function Slide02Digital() {
   return (
-    <div className="relative w-full h-full bg-neutral-950 flex px-10 md:px-16 py-10 overflow-hidden select-none">
+    <div className="relative w-full h-full bg-neutral-950 flex flex-col lg:flex-row px-4 sm:px-6 md:px-10 lg:px-16 py-6 sm:py-8 md:py-10 overflow-hidden select-none gap-6 md:gap-8 lg:gap-10">
       {/* Amber atmosphere */}
       <div className="absolute -left-40 top-1/2 -translate-y-1/2 w-[560px] h-[560px] bg-amber-500/[0.04] rounded-full blur-[120px] pointer-events-none" />
 
       {/* Left: Anchor text */}
-      <div className="relative z-10 flex flex-col justify-between w-[48%]">
+      <div className="relative z-10 flex flex-col justify-center w-full lg:w-1/2">
         <motion.span
-          className="font-mono text-[10px] text-neutral-600 tracking-[0.25em] uppercase"
+          className="font-mono text-[8px] sm:text-[9px] md:text-[10px] text-neutral-600 tracking-[0.2em] sm:tracking-[0.25em] uppercase mb-4 md:mb-6"
           initial={{ opacity: 0, y: -14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
@@ -47,7 +47,7 @@ export function Slide02Digital() {
           <div className="overflow-hidden">
             <motion.div
               className="font-display text-white leading-none tracking-tight"
-              style={{ fontSize: "clamp(5rem, 14vw, 17rem)" }}
+              style={{ fontSize: "clamp(3rem, 10vw, 17rem)" }}
               initial={{ y: "110%" }}
               whileInView={{ y: "0%" }}
               viewport={{ once: false }}
@@ -59,7 +59,7 @@ export function Slide02Digital() {
           <div className="overflow-hidden">
             <motion.div
               className="font-display text-amber-400 leading-none tracking-tight"
-              style={{ fontSize: "clamp(3rem, 9vw, 11rem)" }}
+              style={{ fontSize: "clamp(2rem, 7vw, 11rem)" }}
               initial={{ y: "110%" }}
               whileInView={{ y: "0%" }}
               viewport={{ once: false }}
@@ -70,7 +70,7 @@ export function Slide02Digital() {
           </div>
 
           <motion.p
-            className="mt-6 font-sans text-sm text-neutral-500 max-w-xs leading-relaxed"
+            className="mt-4 sm:mt-6 md:mt-6 font-sans text-xs sm:text-sm text-neutral-500 max-w-xs leading-relaxed"
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
@@ -84,7 +84,7 @@ export function Slide02Digital() {
           href="https://datareportal.com/reports/digital-2024-indonesia"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-mono text-[9px] text-neutral-700 tracking-wider hover:text-neutral-500 transition-colors"
+          className="font-mono text-[8px] sm:text-[9px] text-neutral-700 tracking-wider hover:text-neutral-500 transition-colors mt-4 sm:mt-6"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: false }}
@@ -95,11 +95,11 @@ export function Slide02Digital() {
       </div>
 
       {/* Right: Metric cards */}
-      <div className="relative z-10 flex-1 flex flex-col justify-center gap-4 pl-14">
+      <div className="relative z-10 flex-1 flex flex-col justify-center gap-3 sm:gap-4 w-full lg:w-1/2">
         {METRICS.map((m, i) => (
           <motion.div
             key={i}
-            className={`group border p-6 transition-all duration-500 ${
+            className={`group border p-4 sm:p-5 md:p-6 transition-all duration-500 ${
               m.accent
                 ? "border-amber-400/15 hover:border-amber-400/35 hover:bg-amber-400/[0.04]"
                 : "border-neutral-800/60 hover:border-neutral-600 hover:bg-white/[0.02]"
@@ -110,23 +110,23 @@ export function Slide02Digital() {
             transition={{ duration: 0.75, delay: 0.28 + i * 0.14, ease: EASE }}
             whileHover={{ x: -3 }}
           >
-            <div className="flex items-baseline gap-3 mb-2">
+            <div className="flex items-baseline gap-2 sm:gap-3 mb-2">
               <span
-                className={`font-display leading-none text-5xl ${
+                className={`font-display leading-none text-3xl sm:text-4xl md:text-5xl ${
                   m.accent ? "text-amber-400" : "text-white"
                 }`}
               >
                 {m.stat}
               </span>
               <span
-                className={`font-mono text-[10px] tracking-widest uppercase ${
+                className={`font-mono text-[8px] sm:text-[9px] md:text-[10px] tracking-widest uppercase ${
                   m.accent ? "text-amber-700" : "text-neutral-500"
                 }`}
               >
                 {m.unit}
               </span>
             </div>
-            <p className="font-sans text-sm text-neutral-400 leading-relaxed">
+            <p className="font-sans text-xs sm:text-sm text-neutral-400 leading-relaxed">
               {m.desc}
             </p>
           </motion.div>

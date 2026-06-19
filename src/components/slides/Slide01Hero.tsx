@@ -64,7 +64,7 @@ export function Slide01Hero() {
   }, []);
 
   return (
-    <div className="relative w-full h-full bg-neutral-950 flex flex-col px-10 md:px-16 py-10 select-none">
+    <div className="relative w-full h-full bg-neutral-950 flex flex-col px-4 sm:px-6 md:px-10 lg:px-16 py-6 sm:py-8 md:py-10 select-none">
       {/* Subtle dot grid */}
       <div
         className="absolute inset-0 opacity-[0.025] pointer-events-none"
@@ -77,26 +77,26 @@ export function Slide01Hero() {
 
       {/* Header bar */}
       <motion.div
-        className="relative z-10 flex justify-between items-center"
+        className="relative z-10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-4"
         initial={{ opacity: 0, y: -16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false }}
         transition={{ duration: 0.6, ease: EASE }}
       >
-        <span className="font-mono text-[10px] text-neutral-600 tracking-[0.25em] uppercase">
+        <span className="font-mono text-[8px] sm:text-[9px] md:text-[10px] text-neutral-600 tracking-[0.2em] sm:tracking-[0.25em] uppercase">
           01 / 07 - The Manifesto
         </span>
-        <span className="font-mono text-[10px] text-neutral-700 tracking-[0.2em]">
+        <span className="font-mono text-[8px] sm:text-[9px] md:text-[10px] text-neutral-700 tracking-[0.15em] sm:tracking-[0.2em]">
           ILLIYIN SHARING SESSION
         </span>
       </motion.div>
 
       {/* Main content */}
-      <div className="relative z-10 flex-1 flex flex-col justify-center">
+      <div className="relative z-10 flex-1 flex flex-col justify-center py-6 sm:py-8">
         {/* Massive anchor text */}
         <div
           className="font-display text-white leading-[0.88] tracking-tight uppercase"
-          style={{ fontSize: "clamp(4.5rem, 13vw, 16rem)" }}
+          style={{ fontSize: "clamp(2rem, 8vw, 16rem)" }}
         >
           <div>
             <WordReveal text="THE ART OF" delay={0.15} />
@@ -107,7 +107,7 @@ export function Slide01Hero() {
         </div>
 
         <motion.p
-          className="mt-7 font-sans text-sm text-neutral-500 max-w-sm leading-relaxed"
+          className="mt-4 sm:mt-6 md:mt-7 font-sans text-xs sm:text-sm text-neutral-500 max-w-sm leading-relaxed"
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
@@ -118,15 +118,15 @@ export function Slide01Hero() {
         </motion.p>
       </div>
 
-      {/* Rolling items panel */}
+      {/* Rolling items panel - hidden on mobile, positioned on desktop */}
       <motion.aside
-        className="absolute right-10 md:right-16 top-1/2 -translate-y-1/2 w-72 border-l border-neutral-800/70 pl-8 z-10"
+        className="hidden lg:block absolute right-4 sm:right-6 lg:right-10 xl:right-16 top-1/2 -translate-y-1/2 w-56 sm:w-64 lg:w-72 border-l border-neutral-800/70 pl-4 sm:pl-6 lg:pl-8 z-10"
         initial={{ opacity: 0, x: 32 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: false }}
         transition={{ duration: 0.9, delay: 0.95, ease: EASE }}
       >
-        <p className="font-mono text-[9px] text-neutral-600 tracking-[0.3em] uppercase mb-6">
+        <p className="font-mono text-[8px] sm:text-[9px] text-neutral-600 tracking-[0.25em] sm:tracking-[0.3em] uppercase mb-6">
           Session Overview
         </p>
 
@@ -140,13 +140,13 @@ export function Slide01Hero() {
               exit={{ y: -56, opacity: 0 }}
               transition={{ duration: 0.55, ease: EASE }}
             >
-              <p className="font-mono text-[10px] text-neutral-600 mb-2">
+              <p className="font-mono text-[8px] sm:text-[9px] lg:text-[10px] text-neutral-600 mb-2">
                 [{ITEMS[current].num}]
               </p>
-              <p className="font-display text-[1.6rem] text-white leading-none tracking-wide">
+              <p className="font-display text-[1.2rem] sm:text-[1.4rem] lg:text-[1.6rem] text-white leading-none tracking-wide">
                 {ITEMS[current].en}
               </p>
-              <p className="font-sans text-xs text-neutral-500 mt-2">
+              <p className="font-sans text-[10px] sm:text-xs text-neutral-500 mt-2">
                 {ITEMS[current].id}
               </p>
             </motion.div>
@@ -168,13 +168,13 @@ export function Slide01Hero() {
 
       {/* Footer */}
       <motion.div
-        className="relative z-10 flex justify-between items-center"
+        className="relative z-10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-4"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: false }}
         transition={{ duration: 0.8, delay: 1.2, ease: EASE }}
       >
-        <div className="flex items-center gap-3 font-mono text-[10px] text-neutral-700 tracking-[0.25em] uppercase">
+        <div className="flex items-center gap-3 font-mono text-[8px] sm:text-[9px] md:text-[10px] text-neutral-700 tracking-[0.2em] sm:tracking-[0.25em] uppercase">
           <motion.span
             animate={{ y: [0, 4, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
@@ -183,7 +183,7 @@ export function Slide01Hero() {
           </motion.span>
           Scroll to explore
         </div>
-        <span className="font-mono text-[10px] text-neutral-800 tracking-widest">
+        <span className="font-mono text-[8px] sm:text-[9px] md:text-[10px] text-neutral-800 tracking-widest">
           JOMO × 2026
         </span>
       </motion.div>

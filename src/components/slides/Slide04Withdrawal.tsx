@@ -30,34 +30,34 @@ const ANXIETY = [36, 52, 48, 38, 26, 16, 8];
 
 export function Slide04Withdrawal() {
   return (
-    <div className="relative w-full h-full bg-neutral-950 flex flex-col px-10 md:px-16 py-10 overflow-hidden select-none">
+    <div className="relative w-full h-full bg-neutral-950 flex flex-col px-4 sm:px-6 md:px-10 lg:px-16 py-6 sm:py-8 md:py-10 overflow-hidden select-none gap-6 md:gap-8">
       {/* Blue atmosphere */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[320px] bg-blue-900/[0.08] rounded-full blur-[120px] pointer-events-none" />
 
       {/* Header */}
       <motion.div
-        className="relative z-10 flex justify-between items-center"
+        className="relative z-10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-4"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: false }}
         transition={{ duration: 0.6, ease: EASE }}
       >
-        <span className="font-mono text-[10px] text-neutral-600 tracking-[0.25em] uppercase">
+        <span className="font-mono text-[8px] sm:text-[9px] md:text-[10px] text-neutral-600 tracking-[0.2em] sm:tracking-[0.25em] uppercase">
           04 / 07 - The Withdrawal
         </span>
-        <span className="font-mono text-[10px] text-blue-900/70 tracking-widest uppercase">
+        <span className="font-mono text-[8px] sm:text-[9px] md:text-[10px] text-blue-900/70 tracking-widest uppercase">
           Recovery Phase
         </span>
       </motion.div>
 
       {/* Main */}
-      <div className="relative z-10 flex-1 flex items-center gap-14">
+      <div className="relative z-10 flex-1 flex flex-col lg:flex-row items-center gap-6 md:gap-8 lg:gap-14">
         {/* Left anchor */}
-        <div className="w-[40%] shrink-0">
+        <div className="w-full lg:w-1/2 flex flex-col justify-center">
           <div className="overflow-hidden">
             <motion.div
               className="font-display text-white leading-none tracking-tight"
-              style={{ fontSize: "clamp(3rem, 9vw, 11rem)" }}
+              style={{ fontSize: "clamp(2.5rem, 8vw, 11rem)" }}
               initial={{ y: "110%" }}
               whileInView={{ y: "0%" }}
               viewport={{ once: false }}
@@ -69,7 +69,7 @@ export function Slide04Withdrawal() {
           <div className="overflow-hidden">
             <motion.div
               className="font-display text-blue-400 leading-none tracking-tight"
-              style={{ fontSize: "clamp(2.5rem, 8vw, 10rem)" }}
+              style={{ fontSize: "clamp(1.8rem, 6vw, 10rem)" }}
               initial={{ y: "110%" }}
               whileInView={{ y: "0%" }}
               viewport={{ once: false }}
@@ -80,7 +80,7 @@ export function Slide04Withdrawal() {
           </div>
 
           <motion.p
-            className="mt-6 font-sans text-sm text-neutral-500 max-w-xs leading-relaxed"
+            className="mt-4 sm:mt-6 md:mt-6 font-sans text-xs sm:text-sm text-neutral-500 max-w-xs leading-relaxed"
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
@@ -92,26 +92,26 @@ export function Slide04Withdrawal() {
 
           {/* 7-day anxiety bar chart */}
           <motion.div
-            className="mt-9"
+            className="mt-6 sm:mt-8 md:mt-9"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: false }}
             transition={{ duration: 0.7, delay: 0.9, ease: EASE }}
           >
-            <p className="font-mono text-[8px] text-neutral-700 tracking-widest uppercase mb-3">
+            <p className="font-mono text-[7px] sm:text-[8px] text-neutral-700 tracking-widest uppercase mb-3">
               Anxiety Level · Day 1–7
             </p>
-            <div className="flex items-end gap-1.5">
+            <div className="flex items-end gap-1 sm:gap-1.5">
               {ANXIETY.map((h, i) => (
-                <div key={i} className="flex flex-col items-center gap-1.5">
+                <div key={i} className="flex flex-col items-center gap-1 sm:gap-1.5">
                   <div
-                    className="w-6 bg-neutral-900 overflow-hidden flex flex-col justify-end"
-                    style={{ height: 56 }}
+                    className="w-4 sm:w-5 md:w-6 bg-neutral-900 overflow-hidden flex flex-col justify-end"
+                    style={{ height: 40 }}
                   >
                     <motion.div
                       className="w-full bg-blue-500/40"
                       initial={{ height: 0 }}
-                      whileInView={{ height: h }}
+                      whileInView={{ height: h * 0.7 }}
                       viewport={{ once: false }}
                       transition={{
                         duration: 0.7,
@@ -120,7 +120,7 @@ export function Slide04Withdrawal() {
                       }}
                     />
                   </div>
-                  <span className="font-mono text-[8px] text-neutral-700">
+                  <span className="font-mono text-[7px] sm:text-[8px] text-neutral-700">
                     D{i + 1}
                   </span>
                 </div>
@@ -130,11 +130,11 @@ export function Slide04Withdrawal() {
         </div>
 
         {/* Right: Glass cards */}
-        <div className="flex-1 flex flex-col gap-3">
+        <div className="w-full lg:w-1/2 flex flex-col gap-2 sm:gap-3">
           {CARDS.map((c, i) => (
             <motion.div
               key={c.id}
-              className="relative border border-white/[0.05] p-5 overflow-hidden group transition-all duration-500 hover:border-blue-400/20"
+              className="relative border border-white/[0.05] p-3 sm:p-4 md:p-5 overflow-hidden group transition-all duration-500 hover:border-blue-400/20"
               style={{
                 background: "rgba(255,255,255,0.018)",
                 backdropFilter: "blur(6px)",
@@ -148,18 +148,18 @@ export function Slide04Withdrawal() {
               {/* Hover glow */}
               <div className="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/[0.04] transition-colors duration-500 pointer-events-none" />
 
-              <div className="relative flex items-start gap-4">
-                <span className="font-mono text-[9px] text-neutral-700 shrink-0 mt-[3px]">
+              <div className="relative flex items-start gap-3 sm:gap-4">
+                <span className="font-mono text-[8px] sm:text-[9px] text-neutral-700 shrink-0 mt-[3px]">
                   [{c.id}]
                 </span>
-                <div>
-                  <h3 className="font-display text-xl text-white tracking-wide mb-1.5">
+                <div className="min-w-0">
+                  <h3 className="font-display text-base sm:text-lg md:text-xl text-white tracking-wide mb-1 sm:mb-1.5">
                     {c.title}
                   </h3>
-                  <p className="font-sans text-sm text-neutral-400 leading-relaxed">
+                  <p className="font-sans text-xs sm:text-sm text-neutral-400 leading-relaxed">
                     {c.desc}
                   </p>
-                  <p className="font-mono text-[9px] text-neutral-700 mt-2 tracking-wider">
+                  <p className="font-mono text-[8px] sm:text-[9px] text-neutral-700 mt-1.5 sm:mt-2 tracking-wider">
                     {c.source}
                   </p>
                 </div>
@@ -181,7 +181,7 @@ export function Slide04Withdrawal() {
           href="https://creatorsfreepress.wordpress.com/wp-content/uploads/2020/09/56d31-jscp.2018.37.10.751.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-mono text-[9px] text-neutral-800 tracking-wider hover:text-neutral-600 transition-colors"
+          className="font-mono text-[8px] sm:text-[9px] text-neutral-800 tracking-wider hover:text-neutral-600 transition-colors"
         >
           ↗ GUILFORDJOURNALS.COM - JSCP.2018.37.10.751
         </a>

@@ -25,7 +25,7 @@ const POINTS = [
 
 export function Slide03Dopamine() {
   return (
-    <div className="relative w-full h-full bg-neutral-950 flex flex-col px-10 md:px-16 py-10 overflow-hidden select-none">
+    <div className="relative w-full h-full bg-neutral-950 flex flex-col px-4 sm:px-6 md:px-10 lg:px-16 py-6 sm:py-8 md:py-10 overflow-hidden select-none gap-6 md:gap-8">
       {/* Crimson tint overlay */}
       <div className="absolute inset-0 bg-red-950/[0.18] pointer-events-none" />
       {/* Red radial glow */}
@@ -33,28 +33,28 @@ export function Slide03Dopamine() {
 
       {/* Header */}
       <motion.div
-        className="relative z-10 flex justify-between items-center"
+        className="relative z-10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-4"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: false }}
         transition={{ duration: 0.6, ease: EASE }}
       >
-        <span className="font-mono text-[10px] text-red-950 tracking-[0.25em] uppercase">
+        <span className="font-mono text-[8px] sm:text-[9px] md:text-[10px] text-red-950 tracking-[0.2em] sm:tracking-[0.25em] uppercase">
           03 / 07 - The Dopamine Engine
         </span>
-        <span className="font-mono text-[10px] text-red-900/60 tracking-widest">
+        <span className="font-mono text-[8px] sm:text-[9px] md:text-[10px] text-red-900/60 tracking-widest">
           ● DANGER ZONE
         </span>
       </motion.div>
 
       {/* Main layout */}
-      <div className="relative z-10 flex-1 flex items-center gap-14">
+      <div className="relative z-10 flex-1 flex flex-col lg:flex-row items-center gap-6 md:gap-8 lg:gap-14">
         {/* Left anchor */}
-        <div className="w-[42%] shrink-0">
+        <div className="w-full lg:w-1/2 flex flex-col justify-center">
           <div className="overflow-hidden">
             <motion.div
               className="font-display text-white leading-none tracking-tight"
-              style={{ fontSize: "clamp(4rem, 11vw, 14rem)" }}
+              style={{ fontSize: "clamp(2.5rem, 8vw, 14rem)" }}
               initial={{ y: "110%" }}
               whileInView={{ y: "0%" }}
               viewport={{ once: false }}
@@ -66,7 +66,7 @@ export function Slide03Dopamine() {
           <div className="overflow-hidden">
             <motion.div
               className="font-display text-red-500 leading-none tracking-tight"
-              style={{ fontSize: "clamp(3.5rem, 10vw, 13rem)" }}
+              style={{ fontSize: "clamp(2rem, 7vw, 13rem)" }}
               initial={{ y: "110%" }}
               whileInView={{ y: "0%" }}
               viewport={{ once: false }}
@@ -77,7 +77,7 @@ export function Slide03Dopamine() {
           </div>
 
           <motion.p
-            className="mt-7 font-sans text-sm text-neutral-500 max-w-xs leading-relaxed"
+            className="mt-4 sm:mt-6 md:mt-7 font-sans text-xs sm:text-sm text-neutral-500 max-w-xs leading-relaxed"
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
@@ -89,29 +89,29 @@ export function Slide03Dopamine() {
         </div>
 
         {/* Right: Matrix grid */}
-        <div className="flex-1 flex flex-col gap-3">
+        <div className="w-full lg:w-1/2 flex flex-col gap-2 sm:gap-3">
           {POINTS.map((p, i) => (
             <motion.div
               key={p.id}
-              className="group border border-red-900/25 bg-red-950/[0.12] p-5 transition-all duration-500 hover:bg-red-950/25 hover:border-red-800/50"
+              className="group border border-red-900/25 bg-red-950/[0.12] p-3 sm:p-4 md:p-5 transition-all duration-500 hover:bg-red-950/25 hover:border-red-800/50"
               initial={{ x: 52, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: false }}
               transition={{ duration: 0.75, delay: 0.28 + i * 0.14, ease: EASE }}
             >
-              <div className="flex items-start gap-4">
-                <span className="font-mono text-[9px] text-red-900/70 shrink-0 mt-[3px]">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <span className="font-mono text-[8px] sm:text-[9px] text-red-900/70 shrink-0 mt-[3px]">
                   [{p.id}]
                 </span>
-                <div>
-                  <h3 className="font-display text-xl text-white tracking-wide mb-1.5">
+                <div className="min-w-0">
+                  <h3 className="font-display text-base sm:text-lg md:text-xl text-white tracking-wide mb-1 sm:mb-1.5">
                     {p.title}
                   </h3>
-                  <p className="font-sans text-sm text-neutral-400 leading-relaxed">
+                  <p className="font-sans text-xs sm:text-sm text-neutral-400 leading-relaxed">
                     {p.desc}
                   </p>
                   {p.source && (
-                    <p className="font-mono text-[9px] text-red-900/50 mt-2 tracking-wider">
+                    <p className="font-mono text-[8px] sm:text-[9px] text-red-900/50 mt-1.5 sm:mt-2 tracking-wider">
                       {p.source}
                     </p>
                   )}
@@ -134,7 +134,7 @@ export function Slide03Dopamine() {
           href="https://unplugged.sunygeneseoenglish.org/wp-content/uploads/sites/31/2019/11/Domamine-PDF.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-mono text-[9px] text-neutral-800 tracking-wider hover:text-neutral-600 transition-colors"
+          className="font-mono text-[8px] sm:text-[9px] text-neutral-800 tracking-wider hover:text-neutral-600 transition-colors"
         >
           ↗ SITN.HMS.HARVARD.EDU - DOPAMINE-SMARTPHONES-BATTLE-TIME
         </a>

@@ -28,34 +28,34 @@ const CARDS = [
 
 export function Slide06Resolution() {
   return (
-    <div className="relative w-full h-full bg-neutral-950 flex flex-col px-10 md:px-16 py-10 overflow-hidden select-none">
+    <div className="relative w-full h-full bg-neutral-950 flex flex-col px-4 sm:px-6 md:px-10 lg:px-16 py-6 sm:py-8 md:py-10 overflow-hidden select-none gap-6 md:gap-8">
       {/* Emerald glow */}
       <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[560px] h-[560px] bg-emerald-900/[0.1] rounded-full blur-[130px] pointer-events-none" />
 
       {/* Header */}
       <motion.div
-        className="relative z-10 flex justify-between items-center"
+        className="relative z-10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-4"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: false }}
         transition={{ duration: 0.6, ease: EASE }}
       >
-        <span className="font-mono text-[10px] text-neutral-600 tracking-[0.25em] uppercase">
+        <span className="font-mono text-[8px] sm:text-[9px] md:text-[10px] text-neutral-600 tracking-[0.2em] sm:tracking-[0.25em] uppercase">
           06 / 07 - The Resolution
         </span>
-        <span className="font-mono text-[10px] text-emerald-900/70 tracking-widest uppercase">
+        <span className="font-mono text-[8px] sm:text-[9px] md:text-[10px] text-emerald-900/70 tracking-widest uppercase">
           ◆ JOMO Protocol
         </span>
       </motion.div>
 
       {/* Main */}
-      <div className="relative z-10 flex-1 flex items-center gap-14">
+      <div className="relative z-10 flex-1 flex flex-col lg:flex-row items-center gap-6 md:gap-8 lg:gap-14">
         {/* Left anchor */}
-        <div className="w-[42%] shrink-0">
+        <div className="w-full lg:w-1/2 flex flex-col justify-center">
           <div className="overflow-hidden">
             <motion.div
               className="font-display text-white leading-none tracking-tight"
-              style={{ fontSize: "clamp(4rem, 12vw, 14rem)" }}
+              style={{ fontSize: "clamp(3rem, 10vw, 14rem)" }}
               initial={{ y: "110%" }}
               whileInView={{ y: "0%" }}
               viewport={{ once: false }}
@@ -67,7 +67,7 @@ export function Slide06Resolution() {
           <div className="overflow-hidden">
             <motion.div
               className="font-display text-emerald-400 leading-none tracking-tight"
-              style={{ fontSize: "clamp(3.5rem, 10vw, 12rem)" }}
+              style={{ fontSize: "clamp(2.5rem, 8vw, 12rem)" }}
               initial={{ y: "110%" }}
               whileInView={{ y: "0%" }}
               viewport={{ once: false }}
@@ -78,7 +78,7 @@ export function Slide06Resolution() {
           </div>
 
           <motion.p
-            className="mt-6 font-sans text-sm text-neutral-500 max-w-xs leading-relaxed"
+            className="mt-4 sm:mt-6 md:mt-6 font-sans text-xs sm:text-sm text-neutral-500 max-w-xs leading-relaxed"
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
@@ -90,46 +90,46 @@ export function Slide06Resolution() {
 
           {/* JOMO badge */}
           <motion.div
-            className="mt-9 inline-flex items-center gap-3 border border-emerald-800/30 px-4 py-2"
+            className="mt-6 sm:mt-8 md:mt-9 inline-flex items-center gap-2 sm:gap-3 border border-emerald-800/30 px-3 sm:px-4 py-2"
             initial={{ opacity: 0, scale: 0.94 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: false }}
             transition={{ duration: 0.65, delay: 1, ease: EASE }}
           >
-            <span className="font-display text-sm text-emerald-400 tracking-widest">
+            <span className="font-display text-xs sm:text-sm text-emerald-400 tracking-widest">
               JOMO
             </span>
             <span className="h-3 w-px bg-emerald-800/50" />
-            <span className="font-sans text-xs text-neutral-500">
+            <span className="font-sans text-[10px] sm:text-xs text-neutral-500 whitespace-nowrap">
               Joy Of Missing Out
             </span>
           </motion.div>
         </div>
 
         {/* Right: Emerald cards */}
-        <div className="flex-1 flex flex-col gap-3">
+        <div className="w-full lg:w-1/2 flex flex-col gap-2 sm:gap-3">
           {CARDS.map((c, i) => (
             <motion.div
               key={c.id}
-              className="group border border-emerald-900/25 bg-emerald-950/[0.1] p-5 transition-all duration-500 hover:bg-emerald-950/25 hover:border-emerald-800/40"
+              className="group border border-emerald-900/25 bg-emerald-950/[0.1] p-3 sm:p-4 md:p-5 transition-all duration-500 hover:bg-emerald-950/25 hover:border-emerald-800/40"
               initial={{ x: 52, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: false }}
               transition={{ duration: 0.75, delay: 0.28 + i * 0.14, ease: EASE }}
             >
-              <div className="flex items-start gap-4">
-                <span className="text-emerald-800/80 text-lg shrink-0 mt-0.5 group-hover:text-emerald-600 transition-colors duration-500">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <span className="text-emerald-800/80 text-lg sm:text-xl shrink-0 mt-0.5 group-hover:text-emerald-600 transition-colors duration-500">
                   {c.glyph}
                 </span>
-                <div>
-                  <h3 className="font-display text-xl text-white tracking-wide mb-1.5">
+                <div className="min-w-0">
+                  <h3 className="font-display text-base sm:text-lg md:text-xl text-white tracking-wide mb-1 sm:mb-1.5">
                     {c.title}
                   </h3>
-                  <p className="font-sans text-sm text-neutral-400 leading-relaxed">
+                  <p className="font-sans text-xs sm:text-sm text-neutral-400 leading-relaxed">
                     {c.desc}
                   </p>
                   {c.source && (
-                    <p className="font-mono text-[9px] text-emerald-900/50 mt-2 tracking-wider">
+                    <p className="font-mono text-[8px] sm:text-[9px] text-emerald-900/50 mt-1.5 sm:mt-2 tracking-wider">
                       {c.source}
                     </p>
                   )}
@@ -152,7 +152,7 @@ export function Slide06Resolution() {
           href="https://www.psychologytoday.com/us/blog/happiness-is-state-mind/201807/jomo-the-joy-missing-out"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-mono text-[9px] text-neutral-800 tracking-wider hover:text-neutral-600 transition-colors"
+          className="font-mono text-[8px] sm:text-[9px] text-neutral-800 tracking-wider hover:text-neutral-600 transition-colors"
         >
           ↗ PSYCHOLOGYTODAY.COM - THE-JOY-MISSING-OUT
         </a>
