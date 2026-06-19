@@ -87,7 +87,7 @@ export function Slide01Hero() {
           01 / 07 - The Manifesto
         </span>
         <span className="font-mono text-[10px] text-neutral-700 tracking-[0.2em]">
-          ILLIYIN SESSION
+          ILLIYIN SHARING SESSION
         </span>
       </motion.div>
 

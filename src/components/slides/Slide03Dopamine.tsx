@@ -131,7 +131,7 @@ export function Slide03Dopamine() {
         transition={{ duration: 1, delay: 1, ease: EASE }}
       >
         <a
-          href="https://sitn.hms.harvard.edu/flash/2018/dopamine-smartphones-battle-time/"
+          href="https://unplugged.sunygeneseoenglish.org/wp-content/uploads/sites/31/2019/11/Domamine-PDF.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="font-mono text-[9px] text-neutral-800 tracking-wider hover:text-neutral-600 transition-colors"

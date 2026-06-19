@@ -178,7 +178,7 @@ export function Slide04Withdrawal() {
         transition={{ duration: 1, delay: 1.1, ease: EASE }}
       >
         <a
-          href="https://guilfordjournals.com/doi/10.1521/jscp.2018.37.10.751"
+          href="https://creatorsfreepress.wordpress.com/wp-content/uploads/2020/09/56d31-jscp.2018.37.10.751.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="font-mono text-[9px] text-neutral-800 tracking-wider hover:text-neutral-600 transition-colors"

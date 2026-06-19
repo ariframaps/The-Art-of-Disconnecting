@@ -17,7 +17,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "The Art of Disconnecting - Illiyin Session",
+  title: "The Art of Disconnecting - Illiyin Sharing Session",
   description:
     "Memilih menghilang sejenak di era interkoneksi massal adalah bentuk kemewahan mental.",
 };

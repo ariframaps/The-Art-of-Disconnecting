@@ -149,7 +149,7 @@ export function Slide06Resolution() {
         transition={{ duration: 1, delay: 1.1, ease: EASE }}
       >
         <a
-          href="https://www.psychologytoday.com/us/blog/the-right-mindset/201911/the-joy-missing-out"
+          href="https://www.psychologytoday.com/us/blog/happiness-is-state-mind/201807/jomo-the-joy-missing-out"
           target="_blank"
           rel="noopener noreferrer"
           className="font-mono text-[9px] text-neutral-800 tracking-wider hover:text-neutral-600 transition-colors"

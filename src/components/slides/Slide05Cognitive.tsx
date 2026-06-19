@@ -189,7 +189,7 @@ export function Slide05Cognitive() {
         transition={{ duration: 1, delay: 1.1, ease: EASE }}
       >
         <a
-          href="https://hbr.org/2006/03/the-cost-of-not-paying-attention"
+          href="https://www.interruptions.net/literature/Spira-Basex05.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="font-mono text-[9px] text-neutral-800 tracking-wider hover:text-neutral-600 transition-colors"

@@ -160,7 +160,7 @@ export function Slide07CTA() {
         </span>
         <div className="font-mono text-[9px] text-right text-neutral-700 tracking-widest">
           <div>THE ART OF DISCONNECTING</div>
-          <div className="text-neutral-800 mt-0.5">ILLIYIN SESSION × 2026</div>
+          <div className="text-neutral-800 mt-0.5">ILLIYIN SHARING SESSION × JUNE 2026</div>
         </div>
       </motion.div>
     </div>
