@@ -1,19 +1,8 @@
 # 📴 The Art of Disconnecting — Immersive JOMO Presentation
 
-An award-winning inspired, immersive, and high-end scroll-based presentation website built to unpack the sosiological and cognitive impacts of social media addiction, introducing **JOMO (The Joy of Missing Out)** as the ultimate mental sovereignty.
+An immersive, and high-end scroll-based presentation website built to unpack the sosiological and cognitive impacts of social media addiction, introducing **JOMO (The Joy of Missing Out)** as the ultimate mental sovereignty.
 
 Designed with a brutalist aesthetic, oversized kinetic typography, fluid scroll-jacking, and a synchronized real-time speaker teleprompter system.
-
----
-
-## 🚀 Core Features
-
-- **Awwwards-Grade Interaction:** Seamless full-screen scroll snapping using native CSS `snap-y snap-mandatory` mechanics.
-- **Synchronized Teleprompter (Dual-Mode UI):**
-    - *Left View (2/3):* Ultra-minimalist, typographic slides perfect for the audience.
-    - *Right View (1/3):* Real-time speaker notes and prompt scripts that automatically sync based on the active viewport (Desktop only).
-- **Kinetic Typography:** Built-in micro-interactions and staggered animation triggers on viewport entry using Framer Motion.
-- **Fully Responsive:** Beautifully responsive layouts that hide the technical teleprompter on mobile devices to preserve screen estate.
 
 ---
 
