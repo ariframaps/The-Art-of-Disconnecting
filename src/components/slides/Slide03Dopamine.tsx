@@ -8,12 +8,12 @@ const POINTS = [
   {
     id: "01",
     title: "Variable Reward System",
-    desc: "Otak dipicu seperti mesin judi; ketidakpastian konten baru memicu pelepasan dopamin setiap kali kita scroll layar.",
+    desc: "Otak dipicu seperti mesin judi, ketidakpastian konten baru memicu pelepasan dopamin setiap kali kita scroll layar.",
   },
   {
     id: "02",
     title: "Dr. Anna Lembke - Stanford",
-    desc: "Otak manusia secara biologis tidak siap menghadapi suplai stimulus tanpa batas di ujung jari.",
+    desc: "Otak manusia secara biologis tidak siap menghadapi suplai stimulus tanpa batas.",
     source: "SITN Harvard, 2018",
   },
   {

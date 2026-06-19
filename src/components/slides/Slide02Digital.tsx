@@ -81,7 +81,7 @@ export function Slide02Digital() {
         </div>
 
         <motion.a
-          href="https://datareportal.com/reports/digital-2024-indonesia"
+          href="https://datareportal.com/reports/digital-2025-indonesia"
           target="_blank"
           rel="noopener noreferrer"
           className="font-mono text-[8px] sm:text-[9px] text-neutral-700 tracking-wider hover:text-neutral-500 transition-colors mt-4 sm:mt-6"
@@ -90,7 +90,19 @@ export function Slide02Digital() {
           viewport={{ once: false }}
           transition={{ duration: 1, delay: 1.1, ease: EASE }}
         >
-          ↗ DATAREPORTAL.COM / DIGITAL-2024-INDONESIA
+          ↗ DATAREPORTAL.COM / DIGITAL-2025-INDONESIA
+        </motion.a>
+        <motion.a
+            href="https://indd.adobe.com/view/5355fd83-5476-4a1e-a611-80d786a600d7?allowFullscreen=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-[8px] sm:text-[9px] text-neutral-700 tracking-wider hover:text-neutral-500 transition-colors mt-1.5"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{ duration: 1, delay: 1.1, ease: EASE }}
+        >
+          ↗ WE ARE SOCIAL
         </motion.a>
       </div>
 
